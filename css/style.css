@@ -188,6 +188,27 @@ a {
   text-transform: uppercase;
 }
 
+@keyframes changeColor {
+  0% {
+    color: var(--contrast-title-color);
+  }
+  20% {
+    color: #ff8181;
+  }
+  40% {
+    color: #fffd90;
+  }
+  60% {
+    color: #57fc8c;
+  }
+  80% {
+    color: #f9a1fa;
+  }
+  100% {
+    color: #a9fffd;
+  }
+}
+
 .hero-title {
   width: 630px;
   margin-right: auto;
@@ -198,6 +219,8 @@ a {
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
+
+  animation: changeColor 5000ms var(--cubic-function) 1000ms infinite;
 }
 
 .hero-btn {
@@ -213,6 +236,13 @@ a {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+
+  transform: scale(1);
+  transition: transform 250ms var(--cubic-function);
+}
+
+.hero-btn:hover {
+  transform: scale(1.1);
 }
 
 /* Особенности */
